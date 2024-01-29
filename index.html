@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>AUV-web-dev-task</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="main.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+        <meta name="description" content="AUV-web-dev-task IIT Kanput 2024 solution from Manas Jain Kuniya 230626">
+    </head>
+    <body>
+        <button id="colorChangeBtn">Change Color To</button>
+        <script>
+            colorChangeBtn = document.getElementById("colorChangeBtn")
+            body = document.querySelector("body")
+
+            colors = ["rgb(93, 172, 168)","rgb(72, 160, 220)", "rgb(96, 96, 96)",  "rgb(220, 118, 55)", "rga(190, 170, 250)", "rgb(140, 190, 170)", "rgb(35, 35, 170)"];
+            var i = 1;
+
+            window.onload = () => {
+                body.style.backgroundColor = colors[0];
+                colorChangeBtn.style.backgroundColor = colors[1];
+                colorChangeBtn.style.color = "black";
+            }
+
+            const changeColor = () => {
+                body.style.backgroundColor = colors[i %4];
+                colorChangeBtn.style.backgroundColor = colors[(i+1)%4];
+                i += 1;
+            }
+
+            colorChangeBtn.addEventListener("click", changeColor)
+        </script>
+    </body>
+</html>

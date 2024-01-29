@@ -1,0 +1,21 @@
+* {
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+#colorChangeBtn {
+    height: 50px;
+    width: 300px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    border: none;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bolder;
+}
