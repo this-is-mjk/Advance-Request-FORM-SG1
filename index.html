@@ -1,34 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>AUV-web-dev-task</title>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="main.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
-        <meta name="description" content="AUV-web-dev-task IIT Kanput 2024 solution from Manas Jain Kuniya 230626">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Advance Request FORM - SG1</title>
+        <link rel="stylesheet" href="advanceRequestFromSG1.css">
     </head>
     <body>
-        <button id="colorChangeBtn">Change Color To</button>
-        <script>
-            colorChangeBtn = document.getElementById("colorChangeBtn")
-            body = document.querySelector("body")
+        <div class="top-heading center">
+        <img src="iitkLog.jpeg" alt="iitkLog">
+        <h2>Advance Request FORM – SG1 <br>
+            Indian Institute of Technology Kanpur<br>
+            <span class="not-bold">Students Gymkhana Account</span>
+        </h2>
+        <img src="gymkhanaLogo.jpeg" alt="gymkhanaLogo">
+        </div>
+        <table id="details-table-1">
+            <tr>
+                <td class="grey-bg">Name of Council/Cell:</td>
+                <td class="input-empty"></td>
+                <td class="grey-bg">Name of Club/Head:</td>
+                <td class="input-empty"></td>
+            </tr>
+            <tr>
+                <td class="grey-bg">Name of Executive:</td>
+                <td class="input-empty"></td>
+                <td class="grey-bg">Name Coordinator:</td>
+                <td class="input-empty"></td>
+            </tr>
+            <tr>
+                <td class="grey-bg">Roll No.</td>
+                <td class="input-empty"></td>
+                <td class="grey-bg">Roll No.</td>
+                <td class="input-empty"></td>
+            </tr>
+            <tr>
+                <td class="grey-bg">Contact no.:</td>
+                <td class="input-empty"></td>
+                <td class="grey-bg">Contact no.</td>
+                <td class="input-empty"></td>
+            </tr>
+            <br>
+        </table>
+        <br>
+        <table id="amoutDetails-table-2">
+            <tr>
+                <td class="grey-bg">Amount of Advance:</td>
+                <td class="input-empty grey-bg"></td>
+            </tr>
+            <tr>
+                <td class="grey-bg">Remarks (if any):</td>
+                <td class="input-empty grey-bg"></td>
+            </tr>
+            <tr>
+                <td class="input-empty">(Detailed estimate of proposed expenditure)</td>
+            </tr>
+        </table>
+        <br>
+        <table id="signature-table-3">
+            <tr>
+                <td class="grey-bg">
+                    President/General<br>
+                    Secretary/Chairperson</td>
+                <td class="grey-bg">
+                    Chairperson, Students' Senate<br>
+                    <span class="small">(Only in Case of Senate Seed Fund)</span></td>
+                <td class="grey-bg">Faculty Counsellor</td>
+            </tr>
+            <tr>
+                <td class="input-empty"></td>
+                <td class="input-empty"></td>
+                <td class="input-empty"></td>
+            </tr>
+        </table>
+        <p class="info center">To be filled by Finance Convener / FC Member</p>
+        <table id="budget-details-table-4">
+            <tr>
+                <td></td>
+                <td class="grey-bg">Cell</td>
+                <td class="grey-bg">Council</td>
+            </tr>
+            <tr>
+                <td class="grey-bg">Budget by Students’ Gymkhana</td>
+                <td class="input-empty"></td>
+                <td class="input-empty"></td>
+            </tr>
+            <tr>
+                <td class="grey-bg">Expenditure/ Advance incurred till now</td>
+                <td class="input-empty"></td>
+                <td class="input-empty"></td>
+            </tr>
+            <tr>
+                <td class="grey-bg">Advance Applied for</td>
+                <td class="input-empty"></td>
+                <td class="input-empty"></td>
+            </tr>
+            <tr>
+                <td class="grey-bg">Balance of Budget</td>
+                <td class="input-empty"></td>
+                <td class="input-empty"></td>
+            </tr>
+            <tr>
+                <td class="grey-bg">Outstanding Advances (if any)</td>
+                <td class="input-empty"></td>
+                <td class="input-empty"></td>
+            </tr>
 
-            colors = ["rgb(93, 172, 168)","rgb(72, 160, 220)", "rgb(96, 96, 96)",  "rgb(220, 118, 55)", "rga(190, 170, 250)", "rgb(140, 190, 170)", "rgb(35, 35, 170)"];
-            var i = 1;
-
-            window.onload = () => {
-                body.style.backgroundColor = colors[0];
-                colorChangeBtn.style.backgroundColor = colors[1];
-                colorChangeBtn.style.color = "black";
-            }
-
-            const changeColor = () => {
-                body.style.backgroundColor = colors[i %4];
-                colorChangeBtn.style.backgroundColor = colors[(i+1)%4];
-                i += 1;
-            }
-
-            colorChangeBtn.addEventListener("click", changeColor)
-        </script>
+        </table>
+        <br>
+        <table id="officeSign-table-4">
+            <tr>
+                <td class="grey-bg">Gymkhana Office</td>
+                <td class="grey-bg">Finance Convener</td>
+            </tr>
+            <tr>
+                <td class="input-empty"></td>
+                <td class="input-empty"></td>
+            </tr>
+        </table>
+        <h4 class="info center">Advance adjusted on …………………<span id="date"></span> and payment of ₹ …………………<span id="advanceAdjusted"></span> may be made.</h4>
+        <br>
+        <table id="tresurerSign-table-5">
+            <tr>
+                <td class="grey-bg">
+                    Treasurer<br>
+                    (Students’ Gymkhana)
+                </td>
+                <td class="input-empty"></td>
+            </tr>
+        </table>
     </body>
 </html>
